@@ -1,0 +1,59 @@
+import random
+
+def roll_dice():
+    dice_faces = {
+        1: (
+            "-------\n"
+            "|     |\n"
+            "|  o  |\n"
+            "|     |\n"
+            "-------"
+        ),
+        2: (
+            "-------\n"
+            "| o   |\n"
+            "|     |\n"
+            "|   o |\n"
+            "-------"
+        ),
+        3: (
+            "-------\n"
+            "| o   |\n"
+            "|  o  |\n"
+            "|   o |\n"
+            "-------"
+        ),
+        4: (
+            "-------\n"
+            "| o o |\n"
+            "|     |\n"
+            "| o o |\n"
+            "-------"
+        ),
+        5: (
+            "-------\n"
+            "| o o |\n"
+            "|  o  |\n"
+            "| o o |\n"
+            "-------"
+        ),
+        6: (
+            "-------\n"
+            "| o o |\n"
+            "| o o |\n"
+            "| o o |\n"
+            "-------"
+        )
+    }
+
+    roll = random.randint(1, 6)
+    print(f"\nYou rolled a {roll}!")
+    print(dice_faces[roll])
+
+# Main program loop
+while True:
+    user_input = input("\nPress Enter to roll the dice or type 'q' to quit: ").strip().lower()
+    if user_input == 'q':
+        print("Thanks for playing! 🎲")
+        break
+    roll_dice()
